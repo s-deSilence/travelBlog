@@ -12,12 +12,12 @@ export const AllPosts = ():ReactElement => {
     return (
         <BG image={ bgImg} text="All Posts">
             <section className="posts__last">
-            {
-                allPosts
-                    .map( post => (
-                        <PostPreview {...post} key={ post.id } />
-                    ))
-            }
+                {
+                    allPosts
+                        .map( post => (
+                            <PostPreview {...post} key={ post.id } />
+                        ))
+                }
             </section>
         </BG>
     )

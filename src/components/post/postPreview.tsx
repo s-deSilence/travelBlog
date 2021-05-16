@@ -15,12 +15,12 @@ export const PostPreview = ({ id, mainImage, title, description }:Post):ReactEle
                 <p className="posts__post--description">{ description }</p>
                 {
                     id
-                    ?   <div style={{ display:'flex', justifyContent:'flex-end'}}>
-                            <NavLink to={`/posts/${id}`} className="posts__post--link">
-                                <ArrowRight />
-                            </NavLink>
-                        </div>
-                    :   null
+                        ?   <div style={{ display:'flex', justifyContent:'flex-end'}}>
+                                <NavLink to={`/posts/${id}`} className="posts__post--link">
+                                    <ArrowRight />
+                                </NavLink>
+                            </div>
+                        :   null
                 }
             </div>
         </div>
