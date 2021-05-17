@@ -7,7 +7,7 @@ import { PostPage } from '../post/postPage';
 export const App = ():ReactElement => {
 
     return (
-        <Router>
+        <Router basename="/travelBlog">
             <Switch>
                 <Route exact path="/posts/:id" component={ PostPage }></Route>
                 <Route exact path="/posts" component={ AllPosts }></Route>
