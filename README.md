@@ -1,5 +1,7 @@
 # Travel Blog
 
+If you want to build project remove '/travelBlog/' from webpack.config.js publicPath and router basename
+
 ## Dependencies
 
 - [React] - required v17+. 

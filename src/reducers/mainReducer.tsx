@@ -30,11 +30,22 @@ const initialState:{ defaultPosts: Post[] } = {
         id: 1,
         title:'Iceland',
         description:'According to the ancient manuscript Landnámabók, the settlement of Iceland began in 874 AD when the Norwegian chieftain Ingólfr Arnarson became the first permanent settler on the island.[14] In the following centuries, Norwegians, and to a lesser extent other Scandinavians, emigrated to Iceland, bringing with them thralls (i.e., slaves or serfs) of Gaelic origin.',
-        mainImage:'https://lh3.googleusercontent.com/proxy/asKZIVjzep1wzlvNk1LgEEHwFoKAmnhWypzNSt0zPME_Q3U8ffU1kD3ukW-lSqGz-w0u9gKJFwdMIyHiRmSGl71g0ZCFVvvyXa-RLPGwoJSxeMlGjUHtHRujdpj5'
+        mainImage:'https://cdn21.img.ria.ru/images/156149/22/1561492254_0:0:3175:2048_600x0_80_0_1_d3bdd3d4280bc89f0cfaf18203439437.jpg'
     }]
 }
 
 export const mainReducer = ( state = initialState, action:any ) => {
+
+    switch( action.type ){
+
+        case 'ADD':{
+            state = {
+                ...state,
+                defaultPosts: [ action.payload, ...state.defaultPosts ]
+            }
+            break;
+        }
+    }
     
     return state;
 
